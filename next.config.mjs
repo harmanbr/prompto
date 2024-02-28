@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-        
         serverComponentsExternalPackages: ["mongoose"],
+        missingSuspenseWithCSRBailout: false,
       },
       images: {
         domains: ['lh3.googleusercontent.com'],
-      },
-      experimental: {
-        missingSuspenseWithCSRBailout: false,
       },
       webpack(config) {
         config.experiments = {
