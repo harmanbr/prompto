@@ -7,6 +7,9 @@ import Form from '@components/Form';
 
 const CreatePrompt = () => {
     const router = useRouter();
+    if (!router.isFallback && !post) {
+        return <ErrorPage statusCode={404} />
+    }
     const { data : session } = useSession();
     
     const [submitting, setSubmitting] = useState(false);
